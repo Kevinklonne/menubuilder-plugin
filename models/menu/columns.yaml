@@ -1,0 +1,32 @@
+columns:
+    name:
+        label: 'kevinklonne.menubuilder::lang.menu.name'
+        type: text
+        searchable: true
+        sortable: true
+    code:
+        label: 'kevinklonne.menubuilder::lang.menu.code'
+        type: text
+        searchable: true
+        sortable: true
+    is_active:
+        label: 'kevinklonne.menubuilder::lang.menu.is_active'
+        type: switch
+        sortable: true
+    created_at:
+        label: 'kevinklonne.menubuilder::lang.menu.created'
+        type: datetime
+        sortable: true
+    updated_at:
+        label: 'kevinklonne.menubuilder::lang.menu.updated'
+        type: datetime
+        sortable: true
+    actions:
+        label: 'kevinklonne.menubuilder::lang.menu.actions'
+        type: partial
+        path: column_actions
+        clickable: false
+        sortable: false
+        align: center
+        cssClass: 'column-button'
+        width: '110px'

@@ -1,0 +1,10 @@
+name: MenuItems
+modelClass: Kevinklonne\MenuBuilder\Models\MenuItem
+form: $/kevinklonne/menubuilder/models/menuitem/fields.yaml
+defaultRedirect: kevinklonne/menubuilder/menuitems
+create:
+    redirect: 'kevinklonne/menubuilder/menuitems/update/:id'
+    redirectClose: kevinklonne/menubuilder/menuitems
+update:
+    redirect: kevinklonne/menubuilder/menuitems
+    redirectClose: kevinklonne/menubuilder/menuitems

@@ -1,0 +1,19 @@
+{% if item.url %}
+<a
+    href="{{ item.url }}"
+    class="{{ item.css_class }}"
+    {% if item.is_external %}target="_blank"{% endif %}
+    {% if item.code %}id="{{ item.code }}"{% endif %}
+    {{ item.custom_attributes | raw }}
+>
+    {{ item.label }}
+</a>
+{% else %}
+    <span
+        class="{{ item.css_class }}"
+        {% if item.code %}id="{{ item.code }}"{% endif %}
+        {{ item.custom_attributes | raw }}
+    >
+        {{ item.label }}
+    </span>
+{% endif %}

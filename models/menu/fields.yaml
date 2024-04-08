@@ -1,0 +1,35 @@
+fields:
+    name:
+        label: 'kevinklonne.menubuilder::lang.menu.name'
+        span: left
+        required: 1
+        type: text
+    code:
+        label: 'kevinklonne.menubuilder::lang.menu.code'
+        span: right
+        required: 1
+        defaultFrom: name
+        preset:
+            field: name
+            type: slug
+        type: text
+    description:
+        label: 'kevinklonne.menubuilder::lang.menu.description'
+        size: small
+        span: full
+        type: textarea
+    css_class:
+        label: 'kevinklonne.menubuilder::lang.menu.css'
+        span: full
+        type: text
+    is_active:
+        label: 'kevinklonne.menubuilder::lang.menu.is_active'
+        span: full
+        default: 1
+        type: switch
+
+tabs:
+    fields:
+        items:
+            tab: 'kevinklonne.menubuilder::lang.menu.menu_items'
+            type: relation

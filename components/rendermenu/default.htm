@@ -1,0 +1,33 @@
+{% set menuItems = __SELF__.menuItems %}
+{% set menu = __SELF__.menu %}
+
+<style>
+    .active > a { color: green; }
+    .child-active > a { color: yellow; }
+</style>
+
+{% if menu %}
+
+<ul class="list-disc {{ menu.css_class }}">
+    {% for item in menuItems %}
+            <li class="{{ item.items|length > 0 ? 'parent' }} {{ item.isActive ? 'active' : item.childActive ? 'child-active' }}">
+                {% partial 'RenderMenu::item-default' item = item %}
+
+                {% if item.items|length > 0 %}
+                    <ul class="list-circle">
+                        {% for child in item.items %}
+                            <li class="{{ child.isActive ? 'active' }}">
+                                {% partial 'RenderMenu::item-default' item = child %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+    {% endfor %}
+</ul>
+
+{% else %}
+    
+    <p class="alert alert-danger"><strong>Error:</strong> Menu not found.</p>
+
+{% endif %}

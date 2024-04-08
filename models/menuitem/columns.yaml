@@ -1,0 +1,25 @@
+columns:
+    label:
+        label: 'kevinklonne.menubuilder::lang.menuitem.label'
+        type: text
+        searchable: true
+        sortable: true
+    url:
+        label: 'kevinklonne.menubuilder::lang.menuitem.url'
+        type: partial
+        path: column_for_url
+        searchable: true
+        sortable: true
+    is_hidden:
+        label: 'kevinklonne.menubuilder::lang.menuitem.hidden'
+        type: switch
+        sortable: true
+    is_external:
+        label: 'kevinklonne.menubuilder::lang.menuitem.external'
+        type: switch
+        sortable: true
+    code:
+        label: 'kevinklonne.menubuilder::lang.menuitem.code'
+        type: text
+        searchable: true
+        sortable: true

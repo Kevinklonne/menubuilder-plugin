@@ -1,0 +1,48 @@
+<?php return [
+    'plugin' => [
+        'name' => 'Menu Builder',
+        'description' => 'Plugin for easy menu management',
+        'label' => 'Menu Builder',
+        'sublabel' => 'Menus',
+    ],
+    'menu' => [
+        'name' => 'Name',
+        'code' => 'Code',
+        'description' => 'Description',
+        'css' => 'CSS class',
+        'is_active' => 'Is active',
+        'created' => 'Created at',
+        'updated' => 'Updated at',
+        'menu_items' => 'Menu items',
+        'actions' => 'Actions',
+        'copy_noun' => 'Copy',
+        'copy_verb' => 'Copy',
+        'duplicate_confirm' => 'Do you really want to duplicate this menu?',
+        'duplicate_success' => 'Menu was successfully duplicated.',
+    ],
+    'menuitem' => [
+        'label' => 'Label',
+        'url' => 'URL',
+        'parent' => 'Parent item',
+        'noparent' => '-- No parent --',
+        'external' => 'Is external',
+        'hidden' => 'Is hidden',
+        'css' => 'CSS class',
+        'code' => 'Code',
+        'code_comment' => 'Unique code for API access',
+        'attributes' => 'Attributes',
+        'attributes_comment' => 'HTML attributes',
+        'include_nested' => 'Include nested items',
+        'replace_nested' => 'Replace this item with the nested items',
+    ],
+    'permission' => [
+        'tab' => 'Menu Builder',
+        'label' => 'Manage menus',
+    ],
+    'render_menu' => [
+        'name' => 'Render Menu',
+        'description' => 'Renders a menu',
+        'menu' => 'Menu',
+        'menu_description' => 'Pick a menu',
+    ]
+];

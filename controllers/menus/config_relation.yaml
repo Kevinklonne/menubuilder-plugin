@@ -1,0 +1,12 @@
+items:
+    label: 'kevinklonne.menubuilder::lang.menu.menu_items'
+    view:
+        list: $/kevinklonne/menubuilder/models/menuitem/columns.yaml
+        toolbarButtons: create|delete
+        recordsPerPage: 10
+        structure:
+            showTree: true
+            showReorder: true
+            showSorting: false
+    manage:
+        form: $/kevinklonne/menubuilder/models/menuitem/fields.yaml

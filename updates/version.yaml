@@ -1,0 +1,4 @@
+v1.0.1:
+    - 'First version of Menu Builder plugin'
+    - create_menu_table.php
+    - create_menu_items_table.php

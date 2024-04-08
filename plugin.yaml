@@ -1,0 +1,25 @@
+plugin:
+    name: 'kevinklonne.menubuilder::lang.plugin.name'
+    description: 'kevinklonne.menubuilder::lang.plugin.description'
+    author: KevinKlonne
+    icon: oc-icon-bars
+    homepage: ''
+permissions:
+    manage_menus:
+        tab: 'Menu Builder'
+        label: 'Manage menus'
+navigation:
+    menu-builder:
+        label: 'kevinklonne.menubuilder::lang.plugin.label'
+        url: /
+        icon: icon-list
+        permissions:
+            - manage_menus
+        order: '140'
+        sideMenu:
+            menu-builder-menus:
+                label: 'kevinklonne.menubuilder::lang.plugin.sublabel'
+                url: kevinklonne/menubuilder/menus
+                icon: icon-sitemap
+                permissions:
+                    - manage_menus

@@ -1,0 +1,24 @@
+{
+    "name": "kevinklonne/menubuilder-plugin",
+    "type": "october-plugin",
+    "description": "Create navigation menus for your website.",
+    "homepage": "https://octobercms.com/plugin/kevinklonne-menubuilder",
+    "keywords": [
+        "octobercms-plugin",
+        "octobercms",
+        "php",
+        "laravel",
+        "navigation",
+        "menu"
+    ],
+    "authors": [
+        {
+            "name": "Kevin Klonne",
+            "email": "kklonne@gmail.com"
+        }
+    ],
+    "require": {
+        "october/rain": "^3.0",
+        "composer/installers": "~1.0"
+    }
+}
