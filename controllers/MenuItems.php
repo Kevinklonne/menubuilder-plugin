@@ -1,4 +1,4 @@
-<?php namespace Kevinklonne\MenuBuilder\Controllers;
+<?php namespace KevinKlonne\MenuBuilder\Controllers;
 
 use Backend;
 use BackendMenu;
@@ -21,7 +21,7 @@ class MenuItems extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Kevinklonne.MenuBuilder', 'menu-builder', 'menu-builder-menus');
+        BackendMenu::setContext('KevinKlonne.MenuBuilder', 'menu-builder', 'menu-builder-menus');
     }
 
 }

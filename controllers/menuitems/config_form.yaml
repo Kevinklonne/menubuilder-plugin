@@ -1,5 +1,5 @@
 name: MenuItems
-modelClass: Kevinklonne\MenuBuilder\Models\MenuItem
+modelClass: KevinKlonne\MenuBuilder\Models\MenuItem
 form: $/kevinklonne/menubuilder/models/menuitem/fields.yaml
 defaultRedirect: kevinklonne/menubuilder/menuitems
 create:

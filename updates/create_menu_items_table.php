@@ -1,4 +1,4 @@
-<?php namespace Kevinklonne\MenuBuilder\Updates;
+<?php namespace KevinKlonne\MenuBuilder\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;

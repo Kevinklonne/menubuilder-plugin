@@ -1,4 +1,4 @@
-<?php namespace Kevinklonne\MenuBuilder;
+<?php namespace KevinKlonne\MenuBuilder;
 
 use System\Classes\PluginBase;
 
@@ -27,13 +27,13 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Kevinklonne\MenuBuilder\Components\RenderMenu' => 'RenderMenu',
+            'KevinKlonne\MenuBuilder\Components\RenderMenu' => 'RenderMenu',
         ];
     }
     public function registerPageSnippets()
     {
         return [
-            'Kevinklonne\MenuBuilder\Components\RenderMenu' => 'RenderMenu',
+            'KevinKlonne\MenuBuilder\Components\RenderMenu' => 'RenderMenu',
         ];
     }
 
