@@ -34,13 +34,25 @@ fields:
         label: 'kevinklonne.menubuilder::lang.menuitem.css'
         span: left
         type: text
+        trigger:
+            action: hide
+            field: replace_with_nested
+            condition: checked
     code:
         label: 'kevinklonne.menubuilder::lang.menuitem.code'
         span: right
         type: text
         comment: 'kevinklonne.menubuilder::lang.menuitem.code_comment'
+        trigger:
+            action: hide
+            field: replace_with_nested
+            condition: checked
     custom_attributes:
         label: 'kevinklonne.menubuilder::lang.menuitem.attributes'
         span: full
         type: text
         comment: 'kevinklonne.menubuilder::lang.menuitem.attributes_comment'
+        trigger:
+            action: hide
+            field: replace_with_nested
+            condition: checked

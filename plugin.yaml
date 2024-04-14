@@ -6,8 +6,8 @@ plugin:
     homepage: ''
 permissions:
     manage_menus:
-        tab: 'Menu Builder'
-        label: 'Manage menus'
+        tab: 'kevinklonne.menubuilder::lang.permission.tab'
+        label: 'kevinklonne.menubuilder::lang.permission.label'
 navigation:
     menu-builder:
         label: 'kevinklonne.menubuilder::lang.plugin.label'

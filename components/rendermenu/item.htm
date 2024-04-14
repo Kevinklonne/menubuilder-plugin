@@ -1,0 +1,29 @@
+{% if item.url %}
+    <a
+        href="{{ item.url }}"
+        class="{{ item.css_class }}"
+        {% if item.is_external %}target="_blank"{% endif %}
+        {% if item.code %}data-code="{{ item.code }}"{% endif %}
+        {{ item.custom_attributes | raw }}
+    >
+        {{ item.label }}
+    </a>
+{% else %}
+        <span
+            class="{{ item.css_class }}"
+            {% if item.code %}data-code="{{ item.code }}"{% endif %}
+            {{ item.custom_attributes | raw }}
+        >
+            {{ item.label }}
+        </span>
+{% endif %}
+
+{% if item.items|length > 0 %}
+    <ul>
+        {% for child in item.items %}
+            <li class="{{ child.isActive ? 'active' }}">
+                {% partial '@item' item = child %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

@@ -50,7 +50,7 @@ class RenderMenu extends ComponentBase
         }
     }
 
-    private function getMenu()
+    public function getMenu()
     {
         $menuCode = $this->property('menuCode');
         $menu = new Menu;
@@ -63,7 +63,7 @@ class RenderMenu extends ComponentBase
         return $menu;
     }
 
-    private function getMenuItems()
+    public function getMenuItems()
     {        
         if ( !$this->menu ) {
             return;
@@ -95,36 +95,24 @@ class RenderMenu extends ComponentBase
         return $menutree;
     }
     
-    private function makeMenuItem($item, $parent = false)
+    private function makeMenuItem($item)
     {
-        $url = '';
-        $isActive = false;
-
-        if ( $item->url ) {
-            $page = $this->resolvePage($item->url);
-            $isActive = $page->isActive;
-            $url = $page->url;
-        }
-
+        $page = $item->url ? $this->resolvePage($item->url) : '';
         $menuitem = [];
 
         $menuitem['label'] = $item->label;
-        $menuitem['url'] = $url;
+        $menuitem['url'] = $page->url ?: '';
         $menuitem['is_external'] = $item->is_external;
         $menuitem['css_class'] = $item->css_class;
         $menuitem['code'] = $item->code;
         $menuitem['custom_attributes'] = $item->custom_attributes;
-        $menuitem['isActive'] = $isActive;
-        $menuitem['childActive'] = false;
+        $menuitem['isActive'] = $page->isActive ?: false;
         $menuitem['items'] = [];
 
         if ( $item->include_nested ) {
             if ( $page->items ) {
                 foreach ( $page->items as $nested ) {
                     $menuitem['items'][] = $this->makeNestedMenuItem($item, $nested);
-                    if ( $nested->isActive ) {
-                        $menuitem['childActive'] = true;
-                    }
                 }
             }
         }
@@ -138,16 +126,9 @@ class RenderMenu extends ComponentBase
                 $resolveChild = $this->resolvePage($child->url);
                 foreach ( $resolveChild->items as $nested ){
                     $menuitem['items'][] = $this->makeNestedMenuItem($item, $nested);
-                    if ( $nested->isActive ) {
-                        $menuitem['childActive'] = true;
-                    }
                 }
             } else {
                 $menuitem['items'][] = $this->makeMenuItem($child, $item);
-                $isActive = $this->isActive($child->url);
-                if ( $isActive ) {
-                    $menuitem['childActive'] = true;
-                }
             }
         }
 
@@ -161,7 +142,6 @@ class RenderMenu extends ComponentBase
         $menuitem['label'] = $nestedItem->title;
         $menuitem['url'] = $nestedItem->url;
         $menuitem['isActive'] = $nestedItem->isActive;
-        $menuitem['childActive'] = false;
 
         if ( !$item->include_nested ) {
             return $menuitem;
@@ -181,12 +161,6 @@ class RenderMenu extends ComponentBase
     public function getMenuCodeOptions()
     {
         return Menu::lists('name', 'code');
-    }
-
-    private function isActive($url)
-    {
-        $page = PageManager::resolve($url);
-        return $page->isActive;
     }
 
     private function resolvePage($url)
