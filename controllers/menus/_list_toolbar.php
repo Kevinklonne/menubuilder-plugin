@@ -2,7 +2,7 @@
     <a
         href="<?= Backend::url('kevinklonne/menubuilder/menus/create') ?>"
         class="btn btn-primary oc-icon-plus">
-        <?= e(trans('backend::lang.form.create')) ?>
+        <?= e(trans('kevinklonne.menubuilder::lang.menu.create')) ?>
     </a>
     <button
         class="btn btn-default oc-icon-trash-o"

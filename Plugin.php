@@ -1,26 +1,27 @@
-<?php namespace KevinKlonne\MenuBuilder;
+<?php namespace Kevinklonne\MenuBuilder;
 
 use System\Classes\PluginBase;
 
-/**
- * Plugin class
- */
 class Plugin extends PluginBase
 {
-    public function boot()
-    {
-    }
 
     public function registerComponents()
     {
         return [
-            'KevinKlonne\MenuBuilder\Components\RenderMenu' => 'RenderMenu',
+            'Kevinklonne\MenuBuilder\Components\RenderMenu' => 'RenderMenu',
         ];
     }
     public function registerPageSnippets()
     {
         return [
-            'KevinKlonne\MenuBuilder\Components\RenderMenu' => 'RenderMenu',
+            'Kevinklonne\MenuBuilder\Components\RenderMenu' => 'RenderMenu',
+        ];
+    }
+
+    public function registerFormWidgets()
+    {
+        return [
+            \Kevinklonne\MenuBuilder\FormWidgets\MenuFinder::class => 'menufinder',
         ];
     }
 }

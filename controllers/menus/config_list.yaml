@@ -1,5 +1,5 @@
 list: $/kevinklonne/menubuilder/models/menu/columns.yaml
-modelClass: KevinKlonne\MenuBuilder\Models\Menu
+modelClass: Kevinklonne\MenuBuilder\Models\Menu
 title: Menus
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true

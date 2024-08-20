@@ -9,6 +9,10 @@ columns:
         type: text
         searchable: true
         sortable: true
+        tooltip:
+            title: 'kevinklonne.menubuilder::lang.menu.code_tooltip'
+            placement: bottom
+            icon: icon-exclamation-circle
     is_active:
         label: 'kevinklonne.menubuilder::lang.menu.is_active'
         type: switch

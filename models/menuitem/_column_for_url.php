@@ -1,4 +1,4 @@
 <?php if ($value) { ?>
 <?php $page = \Cms\Classes\PageManager::resolve($value); ?>
-<?= e($page->type) ?> / <?= e($page->title) ?>
+<?= e($page->title) ?> <small class="fw-lighter text-muted">(<?= e($page->type) ?>)</small>
 <?php } ?>

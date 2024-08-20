@@ -21,7 +21,7 @@
                     data-hotkey="ctrl+s, cmd+s"
                     data-load-indicator="<?= e(trans('backend::lang.form.saving')) ?>"
                     class="btn btn-primary">
-                    <?= e(trans('backend::lang.form.create')) ?>
+                    <?= e(trans('kevinklonne.menubuilder::lang.menuitem.create')) ?>
                 </button>
                 <button
                     type="button"

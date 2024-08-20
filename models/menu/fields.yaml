@@ -27,9 +27,8 @@ fields:
         span: full
         default: 1
         type: switch
-
-tabs:
-    fields:
-        items:
-            tab: 'kevinklonne.menubuilder::lang.menu.menu_items'
-            type: relation
+    _items_head:
+        label: 'kevinklonne.menubuilder::lang.menu.menu_items'
+        type: section
+    items:
+        type: relation

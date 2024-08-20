@@ -1,5 +1,5 @@
 items:
-    label: 'kevinklonne.menubuilder::lang.menu.menu_items'
+    label: 'kevinklonne.menubuilder::lang.menu.menu_item'
     view:
         list: $/kevinklonne/menubuilder/models/menuitem/columns.yaml
         toolbarButtons: create|delete

@@ -1,4 +1,4 @@
-<?php namespace KevinKlonne\MenuBuilder\Models;
+<?php namespace Kevinklonne\MenuBuilder\Models;
 
 use Model;
 
@@ -33,7 +33,7 @@ class Menu extends Model
 
     public $hasMany = [
         'items' => [
-            \KevinKlonne\MenuBuilder\Models\MenuItem::class,
+            \Kevinklonne\MenuBuilder\Models\MenuItem::class,
             'replicate' => true,
         ],
     ];

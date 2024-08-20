@@ -1,4 +1,4 @@
-<?php namespace KevinKlonne\MenuBuilder\Models;
+<?php namespace Kevinklonne\MenuBuilder\Models;
 
 use Model;
 
@@ -31,7 +31,7 @@ class MenuItem extends Model
     ];
 
     public $belongsTo = [
-        'menu' => \KevinKlonne\MenuBuilder\Models\Menu::class,
+        'menu' => \Kevinklonne\MenuBuilder\Models\Menu::class,
         'parent' => [MenuItem ::class, 'key' => 'parent_id'],
     ];
 

@@ -12,14 +12,14 @@ navigation:
     menu-builder:
         label: 'kevinklonne.menubuilder::lang.plugin.label'
         url: /
-        icon: icon-list
+        icon: icon-text-format-ul
         permissions:
             - manage_menus
         order: '140'
         sideMenu:
-            menu-builder-menus:
+            side-menu-item:
                 label: 'kevinklonne.menubuilder::lang.plugin.sublabel'
                 url: kevinklonne/menubuilder/menus
-                icon: icon-sitemap
+                icon: icon-text-format-ul
                 permissions:
                     - manage_menus
