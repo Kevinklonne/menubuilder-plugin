@@ -1,9 +1,9 @@
-<?php namespace Kevinklonne\MenuBuilder\Components;
+<?php namespace KevinKlonne\MenuBuilder\Components;
 
 use Cms\Classes\ComponentBase;
 use Cms\Classes\PageManager;
-use Kevinklonne\MenuBuilder\Models\Menu;
-use Kevinklonne\MenuBuilder\Models\MenuItem;
+use KevinKlonne\MenuBuilder\Models\Menu;
+use KevinKlonne\MenuBuilder\Models\MenuItem;
 use KevinKlonne\MenuBuilder\Classes\ResolvePage;
 use KevinKlonne\MenuBuilder\Classes\MakeMenuItem;
 use KevinKlonne\MenuBuilder\Classes\MakeNestedMenuItem;

@@ -2,7 +2,7 @@
 
 use Backend\Classes\FormField;
 use Backend\Classes\FormWidgetBase;
-use Kevinklonne\MenuBuilder\Models\Menu;
+use KevinKlonne\MenuBuilder\Models\Menu;
 
 /**
  * MenuFinder Form Widget

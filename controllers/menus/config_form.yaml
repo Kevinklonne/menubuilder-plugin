@@ -1,6 +1,6 @@
 name: Menus
 form: $/kevinklonne/menubuilder/models/menu/fields.yaml
-modelClass: Kevinklonne\MenuBuilder\Models\Menu
+modelClass: KevinKlonne\MenuBuilder\Models\Menu
 defaultRedirect: kevinklonne/menubuilder/menus
 create:
     redirect: 'kevinklonne/menubuilder/menus/update/:id'

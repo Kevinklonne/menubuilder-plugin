@@ -1,4 +1,4 @@
-<?php namespace Kevinklonne\MenuBuilder\Classes;
+<?php namespace KevinKlonne\MenuBuilder\Classes;
 
 class MakeNestedMenuItem
 {

@@ -1,4 +1,4 @@
-<?php namespace Kevinklonne\MenuBuilder\Classes;
+<?php namespace KevinKlonne\MenuBuilder\Classes;
 
 use KevinKlonne\MenuBuilder\Classes\ResolvePage;
 use KevinKlonne\MenuBuilder\Classes\MakeNestedMenuItem;
