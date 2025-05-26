@@ -4,11 +4,6 @@ use Backend\Classes\FormField;
 use Backend\Classes\FormWidgetBase;
 use KevinKlonne\MenuBuilder\Models\Menu;
 
-/**
- * MenuFinder Form Widget
- *
- * @link https://docs.octobercms.com/3.x/extend/forms/form-widgets.html
- */
 class MenuFinder extends FormWidgetBase
 {
     protected $defaultAlias = 'menufinder';

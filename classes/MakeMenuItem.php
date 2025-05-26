@@ -26,6 +26,12 @@ class MakeMenuItem
             $menuitem['isActive'] = $page->isActive ?: false;
             $menuitem['items'] = [];
 
+            if ( $page->url )  {
+                $menuitem['hidden'] = false;
+            } else {
+                $menuitem['hidden'] = true;
+            }
+
             if ( $item->include_nested ) {
                 if ( $page->items ) {
                     foreach ( $page->items as $nested ) {

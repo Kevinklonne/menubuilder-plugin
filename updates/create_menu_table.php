@@ -21,7 +21,7 @@ class MenuBuilderCreateMenuTable extends Migration
             $table->timestamp('deleted_at')->nullable();
         });
     }
-    
+
     public function down()
     {
         Schema::dropIfExists('kevinklonne_menubuilder_menus');

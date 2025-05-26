@@ -19,7 +19,7 @@ class Menus extends Controller
     public $relationConfig = 'config_relation.yaml';
 
     public $requiredPermissions = [
-        'manage_menus' 
+        'manage_menus'
     ];
 
     public function __construct()

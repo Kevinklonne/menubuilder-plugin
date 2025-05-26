@@ -15,7 +15,7 @@ class MenuItems extends Controller
     public $listConfig = 'config_list.yaml';
 
     public $requiredPermissions = [
-        'manage_menus' 
+        'manage_menus'
     ];
 
     public function __construct()

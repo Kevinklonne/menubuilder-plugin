@@ -28,7 +28,7 @@ class MenuBuilderCreateMenuItemsTable extends Migration
             $table->integer('sort_order')->default(0);
         });
     }
-    
+
     public function down()
     {
         Schema::dropIfExists('kevinklonne_menubuilder_menu_items');

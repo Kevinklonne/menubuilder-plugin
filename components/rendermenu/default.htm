@@ -5,9 +5,9 @@
 
     <ul class="{{ menu.css_class }}">
         {% for item in menuItems %}
-                <li class="{{ item.items|length > 0 ? 'parent' }} {{ item.isActive ? 'active' }}">
-                    {% partial '@item' item = item %}
-                </li>
+            <li class="{{ item.items|length > 0 ? 'parent' }} {{ item.isActive ? 'active' }}">
+                {% partial '@item' item = item %}
+            </li>
         {% endfor %}
     </ul>
 
