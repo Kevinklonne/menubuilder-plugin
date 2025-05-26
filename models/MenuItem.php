@@ -39,4 +39,9 @@ class MenuItem extends Model
         'children' => [MenuItem ::class, 'key' => 'parent_id'],
     ];
 
+    public function getParentOptions()
+    {
+        return MenuItem::where('menu_id', $this->menu_id)->where('id', '!=', $this->id)->lists('label', 'id');
+    }
+
 }

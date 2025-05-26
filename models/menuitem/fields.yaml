@@ -11,7 +11,7 @@ fields:
     parent:
         label: 'kevinklonne.menubuilder::lang.menuitem.parent'
         span: full
-        type: relation
+        type: dropdown
         nameFrom: label
         emptyOption: 'kevinklonne.menubuilder::lang.menuitem.noparent'
     is_external:
