@@ -109,9 +109,6 @@ class RenderMenu extends ComponentBase
     public function resetMenu($code)
     {
         $this->setProperty('menuCode', $code);
-        $this->menuReference = null;
-        $this->menu = null;
-        $this->menuItems = null;
 
         $this->menuReference = $this->getMenu();
         $this->menu = $this->getMenuInfo();
