@@ -23,9 +23,12 @@ This plugin allows you to create and manage menus for your website.
 
 ### RenderMenu component
 
-The `RenderMenu` component renders a menu on your website. You can use it in a page or a layout.
+The `RenderMenu` component renders a menu on your website. You can use it in a page, partial or a layout.
 
 ```twig
+[RenderMenu]
+menuCode = "mainmenu"
+==
 {% component 'RenderMenu' %}
 ```
 
@@ -43,3 +46,30 @@ The partial has access to the following variables:
 
 - `menu` - The menu object.
 - `menuItems` - The menu items.
+
+### Menufinder form widget
+
+The `Menufinder` form widget allows you to select a menu in the backend. You can use it in a form to select a menu for a page or a layout.
+
+```yaml
+menu_code:
+    label: Menu
+    type: menufinder
+```
+
+When using the 'Menufinder' form widget, you have to reset the `menuCode` property of the `RenderMenu` component in the page, partial or layout's PHP section. You can also use Twig to reset the `menuCode` property.
+
+First you have to add the 'RenderMenu' component to the page, partial or layout. Then you can reset the `menuCode` property in the PHP section:
+
+```php
+public function onInit()
+{
+    $this['RenderMenu']->menuCode = $menu_code;
+}
+```
+
+or using Twig:
+
+```twig
+{% set menuReset = RenderMenu.resetMenu(menu_code) %}
+```
